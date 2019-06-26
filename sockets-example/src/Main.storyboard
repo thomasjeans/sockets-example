@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3cK-Or-h17">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ARCADECLASSIC.TTF">
+            <string>ArcadeClassic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="PmE-kl-Jzv">
+            <objects>
+                <viewController id="p44-L9-cnV" customClass="HomeViewController" customModule="sockets_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZO2-wX-62G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="tkY-2X-Hye">
+                                <rect key="frame" x="57" y="124.5" width="300" height="559"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ff-chat-hero" translatesAutoresizingMaskIntoConstraints="NO" id="muR-Vf-43q">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="359"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="muR-Vf-43q" secondAttribute="height" multiplier="327:391" id="4uU-Ou-psR"/>
+                                            <constraint firstAttribute="width" constant="300" id="gEP-Rb-OqB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZTm-gf-Tpa">
+                                        <rect key="frame" x="25" y="419" width="250" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ib-Jp-VQS">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="y40-gn-c1Q"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="FF Chat">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0024278541095554829" green="0.0" blue="0.39559999108314514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="55" name="ArcadeClassic"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iV-xe-BUB">
+                                                <rect key="frame" x="0.0" y="80" width="250" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="KfG-Ze-bJo"/>
+                                                    <constraint firstAttribute="width" constant="250" id="pSJ-eO-6Qw"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="tap  to  start">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0026559780817478895" green="0.58648008108139038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="35" name="ArcadeClassic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="v06-Iw-5dy" kind="show" id="29r-8G-kGv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tkY-2X-Hye" firstAttribute="centerX" secondItem="ZO2-wX-62G" secondAttribute="centerX" id="2M8-nE-YIp"/>
+                            <constraint firstItem="tkY-2X-Hye" firstAttribute="centerY" secondItem="ZO2-wX-62G" secondAttribute="centerY" id="PSg-iW-54E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ayn-sU-ELV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h8y-zW-M4k"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6E-u4-wIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342.02898550724638" y="167.41071428571428"/>
+        </scene>
+        <!--Character Select View Controller-->
+        <scene sceneID="gbC-z4-tWs">
+            <objects>
+                <viewController id="v06-Iw-5dy" customClass="CharacterSelectViewController" customModule="sockets_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78o-ot-JXN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cph-2e-N4m">
+                                <rect key="frame" x="82" y="614" width="250" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5dr-9b-0U1"/>
+                                    <constraint firstAttribute="width" constant="250" id="5ef-lh-EPG"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SELECT">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0026559780817478895" green="0.58648008108139038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="35" name="ArcadeClassic"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="cKj-bp-YVP" kind="show" id="S1e-XZ-GT3"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x60-oP-uC5">
+                                <rect key="frame" x="117" y="249" width="180" height="310"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cecil-menu" translatesAutoresizingMaskIntoConstraints="NO" id="6je-y9-5Gk">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="4yw-EK-xgU"/>
+                                            <constraint firstAttribute="height" constant="180" id="snt-fj-RD9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cecil" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPB-dm-Mke">
+                                        <rect key="frame" x="0.0" y="200" width="180" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="46d-Ah-86m"/>
+                                            <constraint firstAttribute="height" constant="110" id="hXp-oB-fNz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArcadeClassic" family="ArcadeClassic" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="5K6-wV-Kvy"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJp-Mz-ade">
+                                <rect key="frame" x="82" y="100" width="250" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="KTz-O5-ajT"/>
+                                    <constraint firstAttribute="width" constant="250" id="YRX-0b-zpp"/>
+                                </constraints>
+                                <string key="text">select your
+character</string>
+                                <fontDescription key="fontDescription" name="ArcadeClassic" family="ArcadeClassic" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKv-WA-yXZ">
+                                <rect key="frame" x="342" y="375" width="22" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="Mrg-aX-EWe"/>
+                                    <constraint firstAttribute="width" secondItem="SKv-WA-yXZ" secondAttribute="height" multiplier="11:29" id="fLR-sZ-q7T"/>
+                                </constraints>
+                                <state key="normal" image="arrow-right"/>
+                                <connections>
+                                    <action selector="forwardButtonTouched:" destination="v06-Iw-5dy" eventType="touchUpInside" id="ws4-ad-qvV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Z-nF-gGN">
+                                <rect key="frame" x="50" y="375" width="22" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="Vue-4n-dIv"/>
+                                    <constraint firstAttribute="width" secondItem="Q4Z-nF-gGN" secondAttribute="height" multiplier="11:29" id="hbV-x4-KoJ"/>
+                                </constraints>
+                                <state key="normal" image="arrow-left"/>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="v06-Iw-5dy" eventType="touchUpInside" id="R7E-qo-hZt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.39560514689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x60-oP-uC5" firstAttribute="centerY" secondItem="78o-ot-JXN" secondAttribute="centerY" id="AjV-Dq-44V"/>
+                            <constraint firstItem="Q4Z-nF-gGN" firstAttribute="centerY" secondItem="78o-ot-JXN" secondAttribute="centerY" id="C6C-eE-6UG"/>
+                            <constraint firstItem="4HU-ON-V3o" firstAttribute="bottom" secondItem="Cph-2e-N4m" secondAttribute="bottom" constant="100" id="Chw-bI-raN"/>
+                            <constraint firstItem="eJp-Mz-ade" firstAttribute="centerX" secondItem="78o-ot-JXN" secondAttribute="centerX" id="aiZ-YI-dgi"/>
+                            <constraint firstItem="x60-oP-uC5" firstAttribute="centerX" secondItem="78o-ot-JXN" secondAttribute="centerX" id="gR2-em-KmJ"/>
+                            <constraint firstItem="eJp-Mz-ade" firstAttribute="top" secondItem="4HU-ON-V3o" secondAttribute="top" constant="100" id="hIE-fu-YBK"/>
+                            <constraint firstItem="x60-oP-uC5" firstAttribute="leading" secondItem="Q4Z-nF-gGN" secondAttribute="trailing" constant="45" id="jrN-UI-EXq"/>
+                            <constraint firstItem="Cph-2e-N4m" firstAttribute="centerX" secondItem="78o-ot-JXN" secondAttribute="centerX" id="kai-i2-X0d"/>
+                            <constraint firstItem="SKv-WA-yXZ" firstAttribute="centerY" secondItem="78o-ot-JXN" secondAttribute="centerY" id="vsr-91-aae"/>
+                            <constraint firstItem="SKv-WA-yXZ" firstAttribute="leading" secondItem="x60-oP-uC5" secondAttribute="trailing" constant="45" id="wKW-nG-HlH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4HU-ON-V3o"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Q4Z-nF-gGN" id="qK9-JM-5q9"/>
+                        <outlet property="characterImageView" destination="6je-y9-5Gk" id="GaT-I8-5NU"/>
+                        <outlet property="characterLabel" destination="yPB-dm-Mke" id="6iO-dh-ZFj"/>
+                        <outlet property="characterStackView" destination="x60-oP-uC5" id="FbR-yo-qea"/>
+                        <outlet property="forwardButton" destination="SKv-WA-yXZ" id="40s-Jr-3Cg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gq4-Zn-LC0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.10144927536237" y="166.74107142857142"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="AOA-Wz-arH">
+            <objects>
+                <viewController id="cKj-bp-YVP" customClass="ChatViewController" customModule="sockets_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7wM-HV-e4V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-aY-LHM">
+                                <rect key="frame" x="20" y="674" width="304" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="zgW-hG-DjF"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="ArcadeClassic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hep-wk-dgX">
+                                <rect key="frame" x="334" y="674" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8HY-PH-85t"/>
+                                    <constraint firstAttribute="height" constant="60" id="HVP-2j-gHZ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="GO">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="20" name="ArcadeClassic"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTouched:" destination="cKj-bp-YVP" eventType="touchUpInside" id="L8I-4K-tCQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bjB-7T-7WO">
+                                <rect key="frame" x="233" y="10" width="171" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOT CONNECTED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kS-VT-f9a">
+                                        <rect key="frame" x="0.0" y="5" width="135" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="ArcadeClassic" family="ArcadeClassic" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mog-not-connected" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-4Z-U3N">
+                                        <rect key="frame" x="141" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="1ky-pu-JDC"/>
+                                            <constraint firstAttribute="height" constant="30" id="iBN-Ld-oj2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.39560514689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2zp-rb-rbp" firstAttribute="bottom" secondItem="aFr-aY-LHM" secondAttribute="bottom" constant="40" id="4ek-aB-3aV"/>
+                            <constraint firstItem="hep-wk-dgX" firstAttribute="leading" secondItem="aFr-aY-LHM" secondAttribute="trailing" constant="10" id="6Bv-e5-hVR"/>
+                            <constraint firstItem="bjB-7T-7WO" firstAttribute="top" secondItem="2zp-rb-rbp" secondAttribute="top" constant="10" id="JDs-5m-Epf"/>
+                            <constraint firstItem="2zp-rb-rbp" firstAttribute="bottom" secondItem="hep-wk-dgX" secondAttribute="bottom" constant="40" id="KOI-1v-0GH"/>
+                            <constraint firstItem="2zp-rb-rbp" firstAttribute="trailing" secondItem="hep-wk-dgX" secondAttribute="trailing" constant="20" id="PYT-Z6-nTg"/>
+                            <constraint firstItem="2zp-rb-rbp" firstAttribute="trailing" secondItem="bjB-7T-7WO" secondAttribute="trailing" constant="10" id="biz-mi-L5k"/>
+                            <constraint firstItem="aFr-aY-LHM" firstAttribute="leading" secondItem="2zp-rb-rbp" secondAttribute="leading" constant="20" id="y4f-hg-TxA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2zp-rb-rbp"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBottomConstraint" destination="KOI-1v-0GH" id="7cU-Vh-iiz"/>
+                        <outlet property="connectionStatusImage" destination="rcq-4Z-U3N" id="285-2n-R45"/>
+                        <outlet property="connectionStatusLabel" destination="0kS-VT-f9a" id="2gn-w0-wSP"/>
+                        <outlet property="textField" destination="aFr-aY-LHM" id="f0w-Bj-UB1"/>
+                        <outlet property="textFieldBottomConstraint" destination="4ek-aB-3aV" id="cdd-E5-3fN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIX-QH-giu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489.8550724637682" y="166.74107142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pBy-AS-uRv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3cK-Or-h17" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MvY-vY-gB9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p44-L9-cnV" kind="relationship" relationship="rootViewController" id="dIa-o2-zk1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3D-hg-maQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1252.1739130434783" y="167.41071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-left" width="50" height="126"/>
+        <image name="arrow-right" width="50" height="126"/>
+        <image name="cecil-menu" width="32" height="32"/>
+        <image name="ff-chat-hero" width="285.5" height="376"/>
+        <image name="mog-not-connected" width="16" height="20"/>
+    </resources>
+</document>

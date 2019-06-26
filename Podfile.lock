@@ -1,0 +1,29 @@
+PODS:
+  - AloeStackView (1.0.1)
+  - ReSwift (4.1.1)
+  - Socket.IO-Client-Swift (14.0.0):
+    - Starscream (~> 3.0.6)
+  - Starscream (3.0.6)
+
+DEPENDENCIES:
+  - AloeStackView
+  - ReSwift
+  - Socket.IO-Client-Swift
+  - Starscream
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AloeStackView
+    - ReSwift
+    - Socket.IO-Client-Swift
+    - Starscream
+
+SPEC CHECKSUMS:
+  AloeStackView: d22c006da4510db5e220968234174654b5ed6ea5
+  ReSwift: d925be0033558f55bd73d92869961230dfe19d52
+  Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+
+PODFILE CHECKSUM: 6e3d8f8f6d66b08078a061d1a11848ddd99bc9c1
+
+COCOAPODS: 1.5.3
