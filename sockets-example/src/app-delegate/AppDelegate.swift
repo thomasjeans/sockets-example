@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+var overrideIP: String?
+
 let sessionID = UUID().uuidString
 
 struct Character {

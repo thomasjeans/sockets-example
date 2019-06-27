@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3cK-Or-h17">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3cK-Or-h17">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-2J-b95">
+                                <rect key="frame" x="349" y="0.0" width="65" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="Oii-yg-gx8">
+                                        <rect key="frame" x="20" y="20" width="25" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0026559780819999999" green="0.58648008110000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="buttonTouched:" destination="p44-L9-cnV" eventType="touchUpInside" id="3U1-ut-4ch"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="PA3-f9-0Cu"/>
+                                    <constraint firstAttribute="height" constant="65" id="Sym-FF-fQh"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="tkY-2X-Hye">
                                 <rect key="frame" x="57" y="124.5" width="300" height="559"/>
                                 <subviews>
@@ -82,6 +98,8 @@
                         <constraints>
                             <constraint firstItem="tkY-2X-Hye" firstAttribute="centerX" secondItem="ZO2-wX-62G" secondAttribute="centerX" id="2M8-nE-YIp"/>
                             <constraint firstItem="tkY-2X-Hye" firstAttribute="centerY" secondItem="ZO2-wX-62G" secondAttribute="centerY" id="PSg-iW-54E"/>
+                            <constraint firstItem="5DE-2J-b95" firstAttribute="trailing" secondItem="ayn-sU-ELV" secondAttribute="trailing" id="SV6-PH-veH"/>
+                            <constraint firstItem="5DE-2J-b95" firstAttribute="top" secondItem="ayn-sU-ELV" secondAttribute="top" id="bIE-EF-NNb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ayn-sU-ELV"/>
                     </view>

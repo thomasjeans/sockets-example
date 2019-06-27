@@ -13,7 +13,7 @@ import SocketIO
 
 class ChatViewController: UIViewController, StoreSubscriber {
 
-    let socketManager = SocketManager(socketURL: URL(string: "http://\(Constants().localIP):\(Constants().port)/")!, config: [.log(true), .compress])
+    var socketManager: SocketManager?
     
     var selectedCharacter: Character?
     
@@ -31,7 +31,16 @@ class ChatViewController: UIViewController, StoreSubscriber {
         prepareViews()
         
         // SocketIO Setup
-        prepareSocketIO(with: socketManager)
+        
+        let ip: String = overrideIP != nil ? overrideIP! : Constants().localIP
+        
+        print("Chat Server IP: \(ip)")
+        
+        socketManager = SocketManager(socketURL: URL(string: "http://\(ip):\(Constants().port)/")!, config: [.log(true), .compress])
+        
+        if let socketManager = socketManager {
+            prepareSocketIO(with: socketManager)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -145,9 +154,11 @@ extension ChatViewController {
     }
     
     func emit(string: String) {
-        let socket = socketManager.defaultSocket
-        let chatMessage = ChatMessage(sessionID: sessionID, message: string, characterName: characters[store.state.selectedCharacterIndex].name)
-        socket.emit("chat message", chatMessage)
+        if let socketManager = socketManager {
+            let socket = socketManager.defaultSocket
+            let chatMessage = ChatMessage(sessionID: sessionID, message: string, characterName: characters[store.state.selectedCharacterIndex].name)
+            socket.emit("chat message", chatMessage)
+        }
     }
 }
 
