@@ -13,3 +13,7 @@ struct Constants {
     let localHost = "localhost"
     let port = 3000
 }
+
+enum SocketClient {
+    case socketIO, starscream, urlSession, network
+}

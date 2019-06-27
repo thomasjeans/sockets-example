@@ -14,9 +14,7 @@ import SocketIO
 class ChatViewController: UIViewController, StoreSubscriber {
 
     var socketManager: SocketManager?
-    
     var selectedCharacter: Character?
-    
     let stackView = AloeStackView()
     
     @IBOutlet weak var connectionStatusLabel: UILabel!
@@ -29,32 +27,22 @@ class ChatViewController: UIViewController, StoreSubscriber {
         super.viewDidLoad()
         
         prepareViews()
-        
-        // SocketIO Setup
-        
-        let ip: String = overrideIP != nil ? overrideIP! : Constants().localIP
-        
-        print("Chat Server IP: \(ip)")
-        
-        socketManager = SocketManager(socketURL: URL(string: "http://\(ip):\(Constants().port)/")!, config: [.log(true), .compress])
-        
-        if let socketManager = socketManager {
-            prepareSocketIO(with: socketManager)
-        }
+        prepareSocket(using: .socketIO)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         store.subscribe(self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         store.unsubscribe(self)
     }
     
     fileprivate func prepareViews() {
-        
         prepareStackView()
         
         textField.textColor = .white
@@ -64,7 +52,6 @@ class ChatViewController: UIViewController, StoreSubscriber {
     }
     
     fileprivate func prepareStackView() {
-
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.backgroundColor = .clear
         stackView.hidesSeparatorsByDefault = true
@@ -76,6 +63,25 @@ class ChatViewController: UIViewController, StoreSubscriber {
         stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         stackView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 30.0).isActive = true
         stackView.bottomAnchor.constraint(equalTo: textField.topAnchor, constant: -10.0).isActive = true
+    }
+    
+    fileprivate func prepareSocket(using client: SocketClient) {
+        switch client {
+        case .socketIO:
+            let ip: String = overrideIP != nil ? overrideIP! : Constants().localIP
+            
+            print("Chat Server IP: \(ip)")
+            
+            socketManager = SocketManager(socketURL: URL(string: "http://\(ip):\(Constants().port)/")!, config: [.log(true), .compress])
+            
+            if let socketManager = socketManager {
+                prepareSocketIO(with: socketManager)
+            }
+            
+        case .starscream, .urlSession, .network:
+            // TODO: -
+            return
+        }
     }
     
     func newState(state: AppState) {
@@ -101,7 +107,6 @@ class ChatViewController: UIViewController, StoreSubscriber {
             textField.text = ""
         }
     }
-    
 }
 
 // MARK: - SocketIO
@@ -147,8 +152,11 @@ extension ChatViewController {
 
             self.stackView.addRow(chatMessageView)
             
+            if self.stackView.getAllRows().count > 6 {
+                self.stackView.removeRow(self.stackView.getAllRows()[0])
+            }
+
             chatMessageView.translatesAutoresizingMaskIntoConstraints = false
-//            chatMessageView.widthAnchor.constraint(equalToConstant: self.stackView.frame.size.width).isActive = true
             chatMessageView.heightAnchor.constraint(equalToConstant: 30.0).isActive = true
         }
     }

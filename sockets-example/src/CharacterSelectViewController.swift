@@ -23,11 +23,13 @@ class CharacterSelectViewController: UIViewController, StoreSubscriber {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         store.subscribe(self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         store.unsubscribe(self)
     }
     
